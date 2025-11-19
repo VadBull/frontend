@@ -23,22 +23,28 @@
         </nav>
     </header>
     <main>
-        <p>
-            <a href="#contacts">Контакты</a>
-        </p>
-        <p>
+        <!-- Внутри <p> лучше не ставить ссылки, которые ведут к якорям -->
+        <a href="#contacts">Контакты</a>
+        <!-- Лишний открывающий тег <p> -->
         <section id="about">
             <h1>Обо мне</h1>
-            </p>
+           <!-- Лишний закрывающий тег <p> -->
             <p>Я это я и я есть</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis quas totam iusto quisquam quod
                 repellendus libero ad, expedita, doloremque numquam? Asperiores tenetur facilis quod fugiat soluta, id
                 in
                 esse.</p>
-            <p>
+                <!-- Нет смысла обворачивать изображение параграфа в тег p если это не текст -->
+            <div>
+                <!-- Тег img - это самозакрывающийся тег, не нужно закрывать его парным тегом -->
+                <!-- Изображение без alt alt="Описание изображения" -->
+                <!-- Почему это важно: -->
+                <!-- 1. SEO -->
+                <!-- 2. доступность для слабовидящих -->
+                <!-- 3. если картинка не загрузится, будет текст -->
                 <img
-                    src="https://i.mycdn.me/getVideoPreview?id=8110949272083&idx=1&type=39&tkn=6fuwjscJffF-WGfl2Juxof68CqI&fn=vid_w"></img>
-            </p>
+                    src="https://i.mycdn.me/getVideoPreview?id=8110949272083&idx=1&type=39&tkn=6fuwjscJffF-WGfl2Juxof68CqI&fn=vid_w" />
+            </div>
         </section>
         <section id="contacts">
             <p>
@@ -50,7 +56,9 @@
     <footer>
 
         <hr />
-        &copy; Шарашкина контора. Все права защищены
+        <!-- Сейчас просто текст — это нормально, но чуть аккуратнее будет так: -->
+        <!-- Все таки footer это семантический тег, и лучше оборачивать текст в <p> -->
+       <p> &copy; Шарашкина контора. Все права защищены</p>
     </footer>
 </body>
 
