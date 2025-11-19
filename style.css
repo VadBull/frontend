@@ -56,6 +56,12 @@ main img {
     clip-path: inset(20% 20% 20% 20%);
 }
 
+.mytextblock {
+        line-height: 1.0;
+    color: #d62222;
+    background-color: #ffffff;
+}
+
 #contacts {
     margin-top: 12px;
     padding: 10px 10px 10px;
